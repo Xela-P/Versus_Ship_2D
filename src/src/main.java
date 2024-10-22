@@ -27,6 +27,8 @@ Scanner scanner = new Scanner(System.in);
             System.out.println("faites bouger votre personnage (w: haut, s: bas, a: gauche, d: droit): ");
             String input = scanner.nextLine();
 			String lastMover = "";
+			
+			// Action du joueur
             switch (input.toLowerCase()) {
                 case "w": 
                     player.move(player.getX(), player.getY() - 1, grille);

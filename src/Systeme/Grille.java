@@ -41,6 +41,7 @@ public Grille(int n , int p) {
                 grille[i][j] = '.';
             }
         }
+		
         grille[playerY][playerX] = 'P';
         grille[ennemiY][ennemiX] = 'E';
     }
