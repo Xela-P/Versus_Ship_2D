@@ -1,8 +1,7 @@
 package Systeme;
+import java.awt.Graphics;
 
-import java.util.Random;
 
-// feur
 public class Grille {
 private int nbLig;
 private int nbCol;
@@ -28,6 +27,14 @@ public Grille(int n , int p) {
         return nbCol;
     }
 
+	public char getCell(int row, int col) {
+        if (row >= 0 && row < nbLig && col >= 0 && col < nbCol) {
+            return grille[row][col];
+        } else {
+            throw new IndexOutOfBoundsException("Invalid grid coordinates.");
+        }
+    }
+
 	public void updateGrid(int playerX, int playerY, int ennemiX, int ennemiY) {
         for (int i = 0; i < nbLig; i++) {
             for (int j = 0; j < nbCol; j++) {
@@ -46,5 +53,6 @@ public Grille(int n , int p) {
             System.out.println();
         }
     }
+
 
 }

@@ -12,14 +12,14 @@ public class Deplacement {
     }
 
     public void updatePositions() {
-        player.moveTowards(ennemi);
+        //player.moveTowards(ennemi);
         ennemi.moveTowards(player);
 
         if (player.getX() == ennemi.getX() && player.getY() == ennemi.getY()) {
             System.out.println("Collision detected!");
         }
         grille.updateGrid(player.getX(), player.getY(), ennemi.getX(), ennemi.getY());
-        grille.displayGrid();
+       // grille.displayGrid();
     }
 }
 

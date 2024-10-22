@@ -16,11 +16,11 @@ public class Player {
         if (x < ennemi.getX()) {
             x++;
         } else if (x > ennemi.getX()) {
-            x--; 
+            x--;
         }
 
         if (y < ennemi.getY()) {
-            y++; 
+            y++;
         } else if (y > ennemi.getY()) {
             y--;
         }
@@ -29,6 +29,8 @@ public class Player {
         if (newX >= 0 && newX < grille.getNbCol() / 2 && newY >= 0 && newY < grille.getNbLig() / 2) {
             this.x = newX;
             this.y = newY;
+        } else {
+            System.out.println("Move out of bounds! Try a different direction.");
         }
     }
 }
